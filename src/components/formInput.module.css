@@ -1,0 +1,59 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  color: var(--clrMuted);
+  display: block;
+  font-size: 14px;
+  order: -1;
+}
+
+.field input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid var(--clrMuted);
+}
+
+.field input[type="file"] {
+  padding: 0;
+}
+
+.field input[type="file"]::file-selector-button {
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  background: var(--clrPrimary);
+  color: var(--clrSecondary);
+  cursor: pointer;
+  padding: 15px;
+  margin-right: 16px;
+}
+
+.field input:invalid[data-touched="true"] {
+  border-color: var(--clrDanger);
+}
+
+.field input:invalid[data-touched="true"] ~ label {
+  color: var(--clrDanger);
+}
+
+.field input:focus {
+  outline: 1px solid var(--clrPrimary);
+}
+
+.field p.error {
+  font-size: 14px;
+  color: var(--clrDanger);
+}
+
+.field p.error span {
+  display: none;
+}
+
+.field input:invalid[data-touched="true"] ~ p.error span {
+  display: inline-block;
+}

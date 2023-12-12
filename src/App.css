@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clrPrimary: #4f024f;
+  --clrSecondary: #fff;
+  --clrMuted: gray;
+  --clrDanger: darkred;
+  --bg: #4f024f55;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.app form {
+  background: var(--clrSecondary);
+  padding: 50px 25px;
+  width: min(100%, 450px);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app form h2 {
+  text-align: center;
+  color: var(--clrPrimary);
+}
+
+.app form [type="submit"] {
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--clrPrimary);
+  color: var(--clrSecondary);
+  cursor: pointer;
+}
+
+.app form [type="submit"]:focus {
+  outline: 2px solid var(--clrSecondary);
+  outline-offset: -8px;
+}
